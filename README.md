@@ -1,5 +1,7 @@
 # Sparky.js
 
+<a href="http://sparkyjs.com/" target="_blank">Visit the Website, sparkyjs.com</a>
+
 ## The Idea
 Sparky.js is a client-side application scaffold which helps those who want to have organized structure in their app, but don't want to subscribe to a particular client-side MVC framework.
 
