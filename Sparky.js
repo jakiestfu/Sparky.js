@@ -21,8 +21,8 @@ var Sparky = Sparky || (function($) {
                 Utils.settings.meta.controller = $('meta[name="controller"]').attr("content");
                 Utils.settings.meta.action = $('meta[name="action"]').attr("content");
 		
-				Utils.settings.currentUser = $('meta[name="userid"]').attr("content");
-				Utils.settings.homeURL = $('meta[name="url"]').attr("content");
+				Utils.settings.meta.currentUser = $('meta[name="userid"]').attr("content");
+				Utils.settings.meta.homeURL = $('meta[name="url"]').attr("content");
                 
             }
         },
