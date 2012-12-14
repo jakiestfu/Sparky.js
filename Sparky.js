@@ -1,11 +1,11 @@
 var Sparky = Sparky || (function($) {
 
-    var Utils   = {}, // Your Toolbox  
-        Ajax    = {}, // Your Ajax Wrapper
-        Events  = {}, // Event-based Actions      
-        Routes  = {}, // Your Page Specific Logic   
-        App     = {}, // Your Global Logic and Initializer
-        Public  = {}; // Your Public Functions
+    var Utils   = {}, // Your toolbox  
+        Ajax    = {}, // Your Ajax wrapper
+        Events  = {}, // Event-based actions      
+        Routes  = {}, // Your page specific logic   
+        App     = {}, // Your global logic and initializer
+        Public  = {}; // Your public functions
 
     Utils = {
         settings: {
