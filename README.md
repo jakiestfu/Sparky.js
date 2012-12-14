@@ -55,7 +55,7 @@ The function `Utils.log` is a wrapper for `console.log`, so that way you may tur
 
 Lastly, we have the `Utils.route` function. Note: This is not to be confused with the `Routes` object. This function will loop through our `Routes` object and execute any page specific code based on the <b>controller</b> and <b>action</b>.
 
-````
+````javascript
 Utils = {
     settings: {
         debug: true,
@@ -117,7 +117,7 @@ The first level of objects within the `Routes` object represent <b>controllers</
 
 <i><small>Example: There are two <b>controller</b> objects to the right, "auth" and "dashboard". If we output in our meta tags "auth" as the <b>controller</b>, `Routes.auth.init()` will be called if it exists. If the <b>action</b> is set to "register", `Routes.auth.register()` will then be called.</small></i>
 
-````
+````javascript
 Routes = {
 	auth: function(){
 		init: function(){
@@ -150,7 +150,7 @@ The base Ajax Object provided in Sparky allows a simple way to make your request
 
 A request for a "Like Button" might look like this:
 						
-````
+````javascript
 Ajax.call('doLike', {pictureID: 7}, function(result){
 	// Success
 }, function(){
@@ -160,7 +160,7 @@ Ajax.call('doLike', {pictureID: 7}, function(result){
 					
 First parameter would be the method we want to call for our Ajax script, second parameter is the data, third is the success function, and <i>if</i> the fourth parameter is set to a function, it will fire <b>only if the user is not logged in</b>.
 
-````
+````javascript
 Ajax = {
 	ajaxUrl: Utils.home_url('ajax'), // return http://myapp.com/ajax/
 	checkAuth: function(returnFunc){
@@ -208,13 +208,13 @@ If you add to the DOM and want to bind elements, you may call `Events.init` or `
 
 Provided are a few examples of the implementation of events. The `this` keyword is available, and if you need to inspect the `event` object, you may pass it as a parameter to your endpoint function.
 
-````
+````html
 <button data-event="doLogin">Login</button>
 
 <input type="text" data-event="numsOnly" data-method="keyup">
 ````
 
-````
+````javascript
 Events = {
     endpoints: {},
     bindEvents: function(){
@@ -238,13 +238,13 @@ Events = {
 }
 ````
 
-````
+````html
 <button data-binded="true" data-event="doLogin">Login</button>
 
 <input data-binded="true" type="text" data-event="numsOnly" data-method="keyup">
 ````
 
-````
+````javascript
 Events = {
     endpoints: {
     
@@ -274,7 +274,7 @@ The `App` object is used to start Sparky, bind events, and route your code. It c
 
 The `Public` object is returned to allow you to publicize any functions you wish, elsewise, the scope of your functionality will be within your application itself. The `App.init` function is returned by default.
 
-````
+````javascript
 App = {
     /*
      * Add any additional functions/objects you want here, 
