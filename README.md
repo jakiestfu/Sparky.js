@@ -20,7 +20,7 @@ With the meta tags provided to the right, it'd be safe to assume that the curren
 
 Lastly, include jQuery, and the path to your Sparky application.
 
-````
+````html
 <!-- Source of http://myapp.com/dashboard/following -->
 
 <!doctype html>
