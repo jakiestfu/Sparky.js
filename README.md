@@ -7,6 +7,8 @@ Sparky.js is a client-side application scaffold which helps those who want to ha
 
 It provides such capabilities as a code Router, an Event system, an Ajax wrapper, and more.
 
+Sparky.js ***is not*** a solution for javascript-powered web-apps, rather, it's a base for websites that are javascript heavy. With few modifications, you can tailor it for any environment you want.
+
 Say goodbye to spaghetti JS, and hello to SparkyJS!
 
 ## Basics
