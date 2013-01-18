@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Sparky.js ToDo Demo</title>
+		
+		<meta name="app-url" content="http://myapp.com/">
+		<meta name="app-route" content="todo/list">
+		
+		<link href="../assets/demo.css" type="text/css" rel="stylesheet">
+		<style type="text/css">
+			
+			.font, header{
+				font-family: 'ProximaNova-Bold', "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+				text-transform: uppercase;
+				letter-spacing: 5px;
+				text-rendering: optimizeLegibility;
+				color: #272B2F;
+				text-align:center;
+				}
+			header{
+				border-bottom: 1px solid #ccc;
+			    padding-bottom: 10px;
+			    margin-bottom: 20px;
+			    font-size: 25px;
+			    margin-top: 30px;
+				}
+			.list{
+				width:500px;
+				margin:0 auto;
+				}
+				.list ul{
+					list-style-type:none;
+					margin:0;
+					padding:0;
+					border:1px solid #ccc;
+					}
+					.list li{
+						border-bottom: 1px solid #DDD;
+						background: rgba(255, 255, 255, 0.75);
+						cursor:pointer;
+						}
+						.list li:last-child{
+							border:none;
+							}
+					.list .cb {
+						display: inline-block;
+						background: #FFF;
+						padding: 10px;
+						border-right:2px solid #999;
+						
+						-webkit-transition: border 0.3s ease; 
+						-moz-transition: border 0.3s ease; 
+						-o-transition: border 0.3s ease; 
+						transition: border 0.3s ease; 
+
+						}
+						.list li:hover .cb{
+							border-right:2px solid #BDE052;
+							}
+					.list span{
+						padding-left:10px;
+						}
+		.list .complete span{
+			color: #999;
+			text-decoration: line-through;
+			font-style: italic;
+			}
+			.author{
+				margin-top: 30px;
+				text-align:center;
+				margin-bottom:50px;
+				}
+				#todo-text{
+					border: 1px solid #ccc;
+				    padding: 10px;
+				    font-size: 18px;
+				    display: inline-block;
+				    margin-right: 0;
+				    width: 360px;
+					}
+				#todo-add{
+				    background: #BDE052;
+				    border: none;
+				    color: rgba(0,0,0,0.3);
+				    font-size: 18px;
+				    padding: 10px 30px;
+				    display: inline-block;
+				    margin-left: 0;
+				    
+				    -webkit-border-radius: 0 3px 3px 0;
+				    -moz-border-radius: 0 3px 3px 0;
+				    border-radius: 0 3px 3px 0;
+				    
+				    -webkit-transition: color 0.3s ease; 
+					-moz-transition: color 0.3s ease; 
+					-o-transition: color 0.3s ease; 
+					transition: color 0.3s ease; 
+					}
+					#todo-add:hover{
+						color:rgba(255,255,255,0.8);
+						}
+		</style>
+	</head>
+	<body>
+		
+		
+		
+		<div class="list">
+			
+			<header>ToDo via Sparky.js</header>
+			
+			<ul></ul>
+		
+			<div class="author">
+				<input type="text" placeholder="Enter Todo" id="todo-text"><input type="button" value="Add" id="todo-add" data-event="lists.add">
+			</div>
+		
+		</div>
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="demo.sparky.todo.js"></script>
+	</body>
+</html>

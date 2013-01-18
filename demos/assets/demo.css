@@ -1,0 +1,80 @@
+::-moz-selection{
+    background:#BDE052;
+    color:#fff;
+    text-shadow:0 1px 0 rgba(0,0,0,0.2);
+}
+::selection{
+    background:#BDE052;
+    color:#fff;
+    text-shadow:0 1px 0 rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar { width: 10px; height:10px; }
+::-webkit-scrollbar-track { background:#272B2F; border-left:1px solid #000; }
+::-webkit-scrollbar-thumb { background:#BDE052; }
+pre::-webkit-scrollbar-track { background:#272B2F; }
+pre::-webkit-scrollbar-thumb { background:#BDE052; }
+
+@font-face {
+		font-family: 'ProximaNova-Bold';
+		src: url('fonts/proximanova-bold.eot');
+		src: url('fonts/proximanova-bold.eot?#iefix') format('embedded-opentype'),
+				 url('fonts/proximanova-bold.woff') format('woff'),
+				 url('fonts/proximanova-bold.ttf') format('truetype'),
+				 url('fonts/proximanova-bold.svg#proximanova-bold') format('svg');
+		font-weight: normal;
+		font-style: normal;
+}
+
+body {
+	font: 14px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #272B2F;
+	background: #EEE;
+	cursor: default;
+	}
+	a{
+		color: #799915;
+	}
+.element{
+	background: #FEFEFE;
+	padding: 20px;
+	border: 1px solid #CCC;
+	border-bottom: 4px solid #BDE052;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	display: inline-block;
+	}
+
+
+.log{
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	height:360px;
+	background: #272B2F;
+	outline: 2px solid rgba(0, 0, 0, 0.1);
+	border-color: #151515;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	}
+	.log .inner{
+		width:100%;
+		height:100%;
+		overflow: auto;
+		font-family: monospace;
+		color: #fefefe;
+		font-size:12px;
+		}
+		.log .pad{
+			display: inline;
+			padding-left: 20px;
+			}
+		.log .inner .entry{
+			padding:0 10px;
+		}
+		.log .inner .entry:hover{
+			background:rgba(255,255,255,0.1);
+			}
