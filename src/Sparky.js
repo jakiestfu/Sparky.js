@@ -27,15 +27,14 @@ var Sparky = Sparky || (function(w,d) {
             return Utils.settings.meta.homeURL+path+'/';            
         },
         query: function(selector){
-        	var els = d.querySelectorAll(selector),
-				temp = [],
-				i;
-			for(i in els){
-				if(typeof els[i] == 'object'){
-					temp.push(els[i]);
-				}
-			}
-			return temp;
+            var els = d.querySelectorAll(selector),
+                temp = [],
+            for(i in els){
+                if(typeof els[i] == 'object'){
+                    temp.push(els[i]);
+                }
+            }
+            return temp;
         },
         log: function(what) {
             if (Utils.settings.debug) {
@@ -44,39 +43,39 @@ var Sparky = Sparky || (function(w,d) {
         },
         parseRoute: function(input) {
 	        
-		    var delimiter = input.delimiter || '/',
-		        paths = input.path.split(delimiter),
-		        check = input.target[paths.shift()],
-		        exists = typeof check != 'undefined',
-		        isLast = paths.length == 0;
-		    input.inits = input.inits || [];
+            var delimiter = input.delimiter || '/',
+                paths = input.path.split(delimiter),
+                check = input.target[paths.shift()],
+                exists = typeof check != 'undefined',
+                isLast = paths.length == 0;
+                input.inits = input.inits || [];
 		    
-		    if (exists) {
-		    	if(typeof check.init == 'function'){
-	    			input.inits.push(check.init);
-	    		}
-		    	if (isLast) {
-		            input.parsed.call(undefined, {
-		                exists: true,
-		                type: typeof check,
-		                obj: check,
-		                inits: input.inits
-		            });
-		        } else {
-		            Utils.parseRoute({
-		                path: paths.join(delimiter), 
-		                target: check,
-		                delimiter: delimiter,
-		                parsed: input.parsed,
-		                inits: input.inits
-		            });
-		        }
-		    } else {
-		        input.parsed.call(undefined, {
-		            exists: false
-		        });
-		    }
-		},
+            if (exists) {
+                if(typeof check.init == 'function'){
+                    input.inits.push(check.init);
+                }
+                if (isLast) {
+                    input.parsed.call(undefined, {
+                        exists: true,
+                        type: typeof check,
+                        obj: check,
+                        inits: input.inits
+                    });
+                } else {
+                    Utils.parseRoute({
+                        path: paths.join(delimiter), 
+                        target: check,
+                        delimiter: delimiter,
+                        parsed: input.parsed,
+                        inits: input.inits
+                    });
+                }
+            } else {
+                input.parsed.call(undefined, {
+                    exists: false
+                });
+            }
+        },
 		
         route: function(){
             
